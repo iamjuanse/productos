@@ -1,2 +1,3 @@
-ID,nombre,descripcion,urlimagen,valoracion,precio,moneda,categoria_ID,estado_codigo,proveedor_ID,createdAt,createdBy,modifiedAt,modifiedBy
-HT-2001,Notebook Basic 15,Notebook Basic 15 with 2 80 GHz quad core,www.products/notebook.com,5,1000,USD,01,EnStock,01,,Analista,,Analista
+ID,codigo,nombre,descripcion,urlimagen,valoracion,precio,moneda,color_estado,categoria_ID,subcategoria_ID,estado_codigo,proveedor_ID,createdAt,createdBy,modifiedAt,modifiedBy
+01, HT-2001,Notebook Basic 15,Notebook Basic 15 Memoria 16,www.products/notebook1.png,5,1000,USD,3,01,01,EnStock,01,,Analista,,Analista
+02, HT-2002,Notebook Basic 16,Notebook Basic 16 Memoria 12,www.products/notebook2.png,3,2000,USD,1,01,01,SinStock,01,,Analista,,Analista

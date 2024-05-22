@@ -14,7 +14,19 @@
     "@sap/eslint-plugin-cds": "^3",
     "eslint": "^9"
   },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "db.sqlite"
+        }
+      }
+    }
+  },
   "scripts": {
-    "start": "cds watch"
+    "all": "cds deploy --to sqlite; cds watch",
+    "start": "cds watch",
+    "deploy": "cds deploy --to sqlite"
   }
 }

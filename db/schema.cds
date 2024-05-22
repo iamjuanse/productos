@@ -7,12 +7,14 @@ using {
 } from '@sap/cds/common';
 
 entity producto : cuid, managed {
+    codigo       : String(7);
     nombre       : String(100);
-    descripcion  : String(255);
+    descripcion  : String(100);
     urlimagen    : String;
     valoracion   : Decimal(2, 2);
-    precio       : Decimal(10, 2);
-    moneda       : String;
+    precio       : Decimal(10, 2) @Measures.ISOCurrency: 'moneda';
+    moneda       : String         @Common.IsCurrency;
+    color_estado : Int16;
     categoria    : Association to one vh_categoria;
     subcategoria : Association to one vh_subcategoria;
     estado       : Association to one vh_estado;
@@ -56,7 +58,7 @@ entity vh_subcategoria : cuid, CodeList {
 
 entity vh_estado : CodeList {
     key codigo : String enum {
-            EnStock            = 'En Stock';
-            SinStock           = 'Sin Stock';
+            EnStock  = 'En Stock';
+            SinStock = 'Sin Stock';
         };
 }
